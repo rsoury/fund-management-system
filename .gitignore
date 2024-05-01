@@ -27,3 +27,7 @@ logs
 
 wrangler.toml
 .wrangler
+
+# App
+server/db/migrations
+server/db/sqlite.db

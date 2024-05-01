@@ -8,7 +8,7 @@ export const useDb = () => {
   if (!_db) {
     if (process.env.DB) {
       _db = drizzleD1(process.env.DB)
-    } else if (process.dev) {
+    } else if (process.env.NODE_ENV !== "production") {
       const sqlite = new Database("server/db/sqlite.db")
       _db = drizzle(sqlite)
     } else {
